@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <!-- Link to the main CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- Block for additional head content -->
     {% block head %} {% endblock %}
 </head>
 <body>
+    <!-- Block for the main content of the page -->
     {% block body %} {% endblock %}
 </body>
 </html>

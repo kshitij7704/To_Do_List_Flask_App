@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     font-family: sans-serif;
+    background-color: #f0f0f0;
 }
 
 h1, h4 {
@@ -8,8 +9,13 @@ h1, h4 {
 }
 
 .content {
-    margin: 0 auto;
-    width: 400px;
+    margin: 10vh auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 table, td, th {
@@ -19,15 +25,24 @@ table, td, th {
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
 }
 
 th {
-    height: 30px;
+    background-color: #f2f2f2;
 }
 
-td {
-    text-align: center;
-    padding: 5px;
+.date {
+    width: 85px;
+}
+
+.action {
+    width: 120px;
 }
 
 .form {
@@ -35,5 +50,76 @@ td {
 }
 
 #content {
-    width: 70%;
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #ff4c4c;
+    border: none;
+    border-radius: 2px;
+    height: 25px;
+    width: 55px;
+    margin: 1px;
+}
+
+.btn-delete a {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-delete:hover {
+    background-color: #ff1a1a;
+}
+
+.btn-update {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 2px;
+    height: 25px;
+    width: 55px;
+    margin: 1px;
+}
+
+.btn-update a {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-update:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 95%;
+    }
 }

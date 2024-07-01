@@ -1,4 +1,4 @@
-# To-Do List Web Application
+# TaskNest - To Do List Web Application
 This is a simple To-Do List web application built using Flask and SQLAlchemy. It supports all CRUD operations (Create, Read, Update, Delete) allowing users to manage tasks effectively.
 
 ## Features

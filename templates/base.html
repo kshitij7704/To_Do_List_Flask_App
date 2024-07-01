@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>TaskNest - A To Do List Webapp</title>
+    <!-- Link to logo of page -->
+    <link rel="shortcut icon" href="{{url_for('static',filename='assets/logo.png')}}">
     <!-- Link to the main CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <!-- Block for additional head content -->
     {% block head %} {% endblock %}
 </head>
 <body>
+    <header class="header">
+        <h1>TaskNest - A To Do List Webapp</h1>
+    </header>
     <!-- Block for the main content of the page -->
-    {% block body %} {% endblock %}
+    <main class="main-content">
+        {% block body %} {% endblock %}
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 TaskNest - Made by <a href="https://kshitij7704.github.io/Kshitij_Portfolio/" target="_blank">Kshitij Kashyap</a></p>
+    </footer>
 </body>
 </html>

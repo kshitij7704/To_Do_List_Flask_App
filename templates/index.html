@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>To Do List</title>
+    <title>TaskNest - A To Do List Webapp</title>
 {% endblock %}
 
 {% block body %} 
@@ -9,12 +9,12 @@
         <h1>To Do List</h1>
         <!-- Checking if there are any tasks -->
         {% if tasks|length < 1 %}
-            <h4>There are no task added in the list</h4>
+            <h4>There are no tasks added to the list</h4>
         {% else %}
             <!-- Display tasks in a table -->
             <table>
                 <tr>
-                    <th>Task</th>
+                    <th class="task">Task</th>
                     <th class="date">Added</th>
                     <th class="action">Actions</th>
                 </tr>
@@ -24,8 +24,8 @@
                         <td>{{ task.date_created.date() }}</td>
                         <td>
                             <!-- Buttons for delete and update -->
-                            <button class="btn-delete"><a href="/delete/{{task.id}}" >Delete</a></button>
-                            <button class="btn-update"><a href="/update/{{task.id}}">Update</a></button>
+                            <button class="btn btn-delete"><a href="/delete/{{task.id}}">Delete</a></button>
+                            <button class="btn btn-update"><a href="/update/{{task.id}}">Update</a></button>
                         </td>
                     </tr>
                 {% endfor %}

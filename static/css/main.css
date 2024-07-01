@@ -2,35 +2,50 @@ body, html {
     margin: 0;
     font-family: sans-serif;
     background-color: #f0f0f0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1, h4 {
     text-align: center;
 }
 
+.main-content {
+    padding: 20px;
+}
+
 .content {
-    margin: 10vh auto;
+    margin: 20px auto;
     padding: 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 table, td, th {
     border: 1px solid #aaa;
+    box-sizing: border-box;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 th, td {
     padding: 10px;
     text-align: center;
+    box-sizing: border-box;
+    width: 100px;
 }
 
 th {
@@ -38,11 +53,15 @@ th {
 }
 
 .date {
-    width: 85px;
+    width: 155px;
+}
+
+.task {
+    width: 400px;
 }
 
 .action {
-    width: 120px;
+    width: 260px;
 }
 
 .form {
@@ -50,11 +69,12 @@ th {
 }
 
 #content {
-    width: calc(100% - 24px);
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -65,6 +85,7 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 input[type="submit"]:hover {
@@ -78,6 +99,7 @@ input[type="submit"]:hover {
     border-radius: 4px;
     text-decoration: none;
     color: white;
+    box-sizing: border-box;
 }
 
 .btn-delete {
@@ -85,14 +107,18 @@ input[type="submit"]:hover {
     border: none;
     border-radius: 2px;
     height: 25px;
-    width: 55px;
+    width: 65px;
     margin: 1px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .btn-delete a {
     text-align: center;
     color: #fff;
     text-decoration: none;
+    display: block;
+    box-sizing: border-box;
 }
 
 .btn-delete:hover {
@@ -104,22 +130,87 @@ input[type="submit"]:hover {
     border: none;
     border-radius: 2px;
     height: 25px;
-    width: 55px;
+    width: 65px;
     margin: 1px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .btn-update a {
     text-align: center;
     color: #fff;
     text-decoration: none;
+    display: block;
+    box-sizing: border-box;
 }
 
 .btn-update:hover {
     background-color: #0056b3;
 }
 
+.header, .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    top: 0;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #9facff;
+}
+
 @media (max-width: 600px) {
+    body {
+        padding-top: 30%;
+    }
+
     .content {
         width: 95%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    .date, .action {
+        width: auto;
+    }
+
+    .btn-delete, .btn-update {
+        width: auto;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 11%;
+    }
+
+    .content {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content {
+        margin-top: 10vh;
     }
 }

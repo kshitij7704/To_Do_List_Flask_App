@@ -23,7 +23,7 @@ This is a simple To-Do List web application built using Flask and SQLAlchemy. It
 ### Installation Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/To_Do_List_Flask_App.git
+git clone https://github.com/kshitij7704/To_Do_List_Flask_App.git
 cd To_Do_List_Flask_App
 ```
 2. Set up virtual environment:
